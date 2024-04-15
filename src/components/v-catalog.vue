@@ -3,10 +3,10 @@
     <div class="v-catalog">
       <div class="v-catalog__list">
         <vCatalogItem
-        v-for="product in PRODUCTS"
-        :key="product.article"
-        :product_data="product"
-        @addToCart = "addToCart"
+          v-for="product in PRODUCTS"
+          :key="product.article"
+          :product_data="product"
+          @addToCart="addToCart"
         />
       </div>
     <!-- v-bind перед product можно опустить, оставить только : -->

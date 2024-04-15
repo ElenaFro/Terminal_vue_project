@@ -27,3 +27,7 @@ npm run dev
 ```sh
 npm run build
 ```
+### слежка за db.json
+
+json-server --watch db.json
+

@@ -1,6 +1,6 @@
 <template>
     <div class="v-cart-item">
-        <img class="v-cart-item__image" :src="('../assets/images/' + cart_item_data.image)" alt="picture"/>
+        <img class="v-cart-item__image" :src="('../src/assets/images/' + cart_item_data.image)" alt="picture"/>
         <div>
             <p>{{ cart_item_data.name }}</p>
             <p>{{ cart_item_data.price }}</p>
@@ -39,8 +39,8 @@ export default {
             this.$emit('deleteFromCart')
         }
     },
-    watch: {},
-    created () { },
+    // watch: {},
+    // created () { },
     mounted () {
         console.log("cart-item")
     }
