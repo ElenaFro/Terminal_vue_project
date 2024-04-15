@@ -1,18 +1,31 @@
 <template>
     <div class="v-main-wrapper">
-      <vCatalog />
-      <vCart v-if="CART.length" :cart_data="CART" />
+      <!-- <router-view></router-view> -->
+      <!-- <keep-alive>
+        <router-view></router-view>
+      </keep-alive> -->
+      <!-- <router-view> больше нельзя использовать непосредственно внутри <transition> или <keep-alive>.
+Вместо этого используйте реквизиты слотов: -->
+
+<router-view v-slot="{ Component }">
+  <keep-alive>
+    <component :is="Component" />
+  </keep-alive>
+</router-view>
+
+      <!-- <vCatalog />
+      <vCart v-if="CART.length" :cart_data="CART" /> -->
     </div>
 </template>
   
 <script>
-import vCatalog from './v-catalog.vue'
-import vCart from './v-cart.vue'
+// import vCatalog from './v-catalog.vue'
+// import vCart from './v-cart.vue'
 import { mapGetters } from 'vuex'
   
 export default {
     name: 'v-main-wrapper',
-    components: { vCatalog, vCart },
+    // components: { vCatalog, vCart },
     props: {},
     data () {
       return {
