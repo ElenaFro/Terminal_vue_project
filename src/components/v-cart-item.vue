@@ -13,7 +13,7 @@
                 {{ cart_item_data.quantity }}
             </span>
         </div>
-        <button @click="deleteFromCart">Delete</button>
+        <button class=" pink btn" @click="deleteFromCart">Удалить</button>
     </div>
 </template>
 
@@ -54,9 +54,10 @@ export default {
     flex-wrap: wrap;
     align-items: center;
     flex-basis: 25%;
-    box-shadow: 0 0 8px 0 grey;
+    box-shadow: 0 0 4px 0 rgb(160, 160, 160);
     padding: 20px;
     margin: 20px;
+    padding-top: 40px;
 } 
 
 .v-cart-item__image {

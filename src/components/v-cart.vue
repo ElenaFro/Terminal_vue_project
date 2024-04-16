@@ -1,13 +1,12 @@
 <template>
   <div class="v-cart">
     <router-link :to="{ name: 'catalog' }">
-      <div class="v-catalog__link_to_cart">cart:{{ CART.length }}</div>
-      <button>Back to catalog</button>
+      <div class="v-catalog__link_to_cart  pink-text">
+        <i class="medium material-icons pink-text text-darken-2">shopping_cart</i>
+        {{ CART.length }}</div>
+      <button class="v-cart__btn pink darken-1 btn">Вернуться в каталог</button>
     </router-link>
-
     <p v-if="!CART.length">Вы ничего сюда не положили...</p>
-
-    <h1>Корзина</h1>
     <vCartItem 
       v-for="(item, index) in CART" 
       :key="item.article"
@@ -15,7 +14,6 @@
       @deleteFromCart="deleteFromCart(index)"
     />
   </div>
-
 </template>
 
 <script>
@@ -62,4 +60,8 @@ p{
   text-align: center;
   font-size: 26px;
 }
+.v-cart__btn {
+  margin-top: 30px;
+  margin-bottom: 60px;
+ }
 </style>

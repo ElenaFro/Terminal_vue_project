@@ -1,13 +1,11 @@
 <script >
 import VMainWrapper from './components/v-main-wrapper.vue';
-
 export default {
   name: 'app',
   components: {
-  VMainWrapper
+    VMainWrapper
   }
 }
-
 </script>
 
 <template>
@@ -17,6 +15,7 @@ export default {
 </template>
 
 <style lang="scss">
+@import "node_modules/materialize-css/dist/css/materialize.min.css";
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -24,18 +23,5 @@ export default {
   text-align: center;
   color: #2c3e50;
   background: white;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
 }
 </style>
